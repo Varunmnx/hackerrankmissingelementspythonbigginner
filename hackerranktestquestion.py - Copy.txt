@@ -1,0 +1,17 @@
+def difference(s):
+ list3 = []
+ list1 = []
+ list2 = ['0','1','2','3','4','5','6','7','8','9']
+ for i in range(97,123):
+   list1.append(chr(i))
+ list2 =[*list2,*list1]
+ for i in list2:
+     if i  in list2 and not i in list(s) :
+         list3.append(i)
+ str2 = ''.join(map(str, list3))
+ return str2
+
+
+if __name__ == "__main__":
+    s = str(input())
+    print(difference(s))
